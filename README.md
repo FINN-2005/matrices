@@ -20,37 +20,43 @@ Install directly from GitHub:
 - Supports iteration, item access, and formatted printing  
 
 ## Example Usage
+```python
+from matrices import Mat
 
-    from matrices import Mat
+# Create matrices
+A = Mat([
+    [1,2],
+    [3,4]
+])
+B = Mat([
+    [5,6],
+    [7,8]
+])
 
-    # Create matrices
-    A = Mat([, ])
-    B = Mat([, ])
+# Addition
+print(A + B)
 
-    # Addition
-    C = A + B
+# Matrix multiplication
+print(A * B)
 
-    # Matrix multiplication
-    D = A * B
+# Element-wise multiplication
+print(A @ B)
 
-    # Element-wise multiplication
-    E = A @ B
+# Determinant
+print(A.det())
 
-    # Determinant
-    det_A = A.det()
+# Inverse matrix
+print(A.inverse())
 
-    # Inverse matrix
-    A_inv = A.inverse()
+# Solve linear system Ax = B
+print(A.solve_linear_system(B))
 
-    # Solve linear system Ax = B
-    x = A.solve_linear_system(B)
+# Transpose
+print(A.transpose())
 
-    # Transpose
-    A_T = A.transpose()
-
-    # Generate random matrix
-    R = Mat.random(input_range=(0, 10), shape=(3, 3), int=True)
-
+# Generate random matrix
+print(Mat.random(input_range=(0, 10), shape=(3, 3), int=True))
+```
 ## Motivation
 
 Built to learn and experiment with matrix operations systematically without relying on NumPy’s abstraction.  
